@@ -1,4 +1,7 @@
 ---
+import "../style/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 const pageTitle = "Magiaslab Home";
 ---
 
@@ -11,10 +14,9 @@ const pageTitle = "Magiaslab Home";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <Navigation />
     <h1>Astro</h1>
     <h1>Il mio Astro</h1>
+    <Footer />
   </body>
 </html>
