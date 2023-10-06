@@ -7,15 +7,18 @@ const pageTitle = "Form";
 <BaseLayout pageTitle={pageTitle}>
   <h2>Pagina di prova del form</h2>
 
-  <form name="contact" netlify>
-    <p>
-      <label>Name <input type="text" name="name" /></label>
-    </p>
-    <p>
-      <label>Email <input type="email" name="email" /></label>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
+  <form action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="0d61967e-b8f6-4f93-9d4e-15b7d7c5ec11">
+
+    <input type="text" name="name" required>
+    <input type="email" name="email" required>
+    <textarea name="message" required></textarea>
+    <div class="h-captcha" data-captcha="true"></div>
+    <button type="submit">Submit Form</button>
+
+</form>
+
+<script src="https://web3forms.com/client/script.js" async defer></script>
   </form>
 </BaseLayout>
